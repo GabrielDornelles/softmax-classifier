@@ -1,5 +1,5 @@
 # softmax-classifier
-A numpy vectorized and non-vectorized full implementation of Cross entropy loss and backpropagation on cifar-10.
+A numpy vectorized and non-vectorized full implementation of Softmax loss function and backpropagation on cifar-10.
 
 Learned and implemented through Karpathy/Stanford cs231n course.
 
