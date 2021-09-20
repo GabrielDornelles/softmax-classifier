@@ -11,6 +11,8 @@ Recorded classes: https://www.youtube.com/playlist?list=PLkt2uSq6rBVctENoVBg1TpC
 
 ![image](https://user-images.githubusercontent.com/56324869/133947770-f2a3bed9-8fab-4fcd-91f0-0f59beb26061.png)
 
+- loss function is cross entropy loss (softmax)
+
 # Single Layer Neural Net (softmax classifier for cifar-10)
 - composed by a simple 3073x10 matrix that transforms an image (32x32x3 matrix) vector space into a 10x1 vector space where each element in the row vector is the probabilty for each class.
 - 1x3073 * 3073x10 = 1x10 probabilities vector
@@ -18,7 +20,7 @@ Recorded classes: https://www.youtube.com/playlist?list=PLkt2uSq6rBVctENoVBg1TpC
 ## Learned weights
 ![image](https://user-images.githubusercontent.com/56324869/133947509-86e5d1f9-43fe-4bd3-b60a-81bfdc16a939.png)
 
-Here each row from the 3073x10 matrix is decomposed by its last element (bias) and re-arranged into a 32x32x3 image (3072 elements). We can see that the learned weights for a simple net like, with only one neuron for each class, each row is trying to simple trying to generalize all the images into a single one, and then, if the pixels in the image inputed are similar on these positions, it activates and gives a higher score for the class.
+Here each row from the 3073x10 matrix is decomposed by its last element (bias) and re-arranged into a 32x32x3 image (3072 elements). We can see that the learned weights for a simple net like that, with only one neuron for each class, each row is simple trying to generalize all the images into a single one, and then, if the pixels in the image inputted are similar on these positions, it activates and gives a higher score for the class.
 
 The best accuracy for this model on cifar-10 after 1000 epoches using SGD and hyperparameter search was 39.7%.
 
