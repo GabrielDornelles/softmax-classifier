@@ -30,7 +30,7 @@ The best accuracy for this model on cifar-10 after 1000 epoches using SGD and hy
 ## 100 Neurons learned weights visualized
 ![image](https://user-images.githubusercontent.com/56324869/133947680-84341d47-2b9b-4801-b140-5e2f824bb608.png)
 
-In this model, the 32x32x3 image matrix is transformed into a 3073x100 vector space (X@W1, image vector multiplied by first matrix), instead of 3073x10 (again, 3072 pixels + 1 bias element), and then, the 3073x100 matrix takes Relu function ( max(0,x) ) and is multiplied by a 100x10 matrix, resulting then in the 10 classes vector.
+In this model, the 32x32x3 image matrix is transformed into 1x100 vector (hidden layer) through a 3073x100 matrix (X@W1, image vector multiplied by first matrix), instead of 3073x10 (again, 3072 pixels + 1 bias element), and then, the 3073x100 matrix takes Relu function ( max(0,x) ) and is multiplied by a 100x10 matrix, resulting then in the 10 classes vector.
 
 Here we can see a few shapes, some looks like different cars, some looks like differents horses, and in general, since its 10x more powerful compared to the 10 neurons net, it can find different features for each class and achieve a higher accuracy, which for this model is close to 50% (depends on hyperparameter search, something between 49 and 52%).
 
